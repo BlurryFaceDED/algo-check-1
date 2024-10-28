@@ -1,0 +1,25 @@
+ALGORITHM algorithm_name
+VAR
+    ch: STRING
+    n: INTEGER //lenth
+    C: INTEGER //voywel
+    m: INTEGER //words
+BEGIN
+    z:=""
+    WHILE (z=" " AND n>0) DO
+        read(ch)
+        n:=ch.length
+        z:=ch[n-1]
+    END_WHILE
+    m:=1
+    c:=0
+    FOR i FROM 0 TO n-1 DO
+        IF (ch[i]==" ") THEN
+            m:=m+1;
+        END_IF
+        IF (ch[i] in {"o","i","u","y","a","e"}) THEN
+            c:=c+1;
+        END_IF
+    END_FOR
+    write("lenth "+n;"voywel "+c;"words "+m)   
+END     
